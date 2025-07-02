@@ -1,2 +1,2 @@
 # github-and-web-basics
-repository to develop a web page using GitHub
+Repositorio para pruebas de desarrollo web, y uso de las herramientas que proporciona github.
