@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Enviar mensaje por WhatsApp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enviar mensaje por WhatsApp</h2>
+
+  <input type="text" id="mensaje" placeholder="Escribe tu mensaje aquí">
+  <br>
+  <button onclick="enviarMensaje()">Enviar por WhatsApp</button>
+
+  <script>
+    function enviarMensaje() {
+      const mensaje = document.getElementById("mensaje").value;
+      const numero = "+529993327783"; // Reemplaza con el número del destinatario
+      if (mensaje.trim() !== "") {
+        const mensajeCodificado = encodeURIComponent(mensaje);
+        const url = `https://wa.me/${numero}?text=${mensajeCodificado}`;
+        window.open(url, "_blank");
+      } else {
+        alert("Por favor escribe un mensaje antes de enviarlo.");
+      }
+    }
+  </script>
+
+</body>
+</html>
